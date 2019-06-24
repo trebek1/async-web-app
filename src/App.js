@@ -12,6 +12,9 @@ import exampleZero from "./examples/example0";
 import exampleZeroHell from "./examples/example0hell";
 import callback from "./examples/callback";
 import promise from "./examples/promise";
+import AsyncAwait from "./examples/AsyncAwait";
+import AsyncAwaitErrorHandling from "./examples/AsyncAwaitErrorHandling";
+import AsyncAwaitLoop from "./examples/AsyncAwaitLoop";
 
 // fetch(`static/jason.json`)
 //   .then(response => response.json())
@@ -74,6 +77,16 @@ const App = () => (
       <h1> Example 3</h1>
       <button onClick={promises}>
         Run Example Three - Synchronous Print After Async Load
+      </button>
+      <h1> Example 4</h1>
+      <button onClick={AsyncAwait}>Run Example Four - Async Await</button>
+      <h1> Example 5</h1>
+      <button onClick={AsyncAwaitErrorHandling}>
+        Run Example Five - Async Await Error Handling
+      </button>
+      <h1> Example 6</h1>
+      <button onClick={AsyncAwaitLoop}>
+        Run Example Six - Async Await Loop
       </button>
       <div id="fetchWaterfall">
         <h1>Order of Load: </h1>
