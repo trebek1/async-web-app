@@ -8,13 +8,26 @@ export default () => {
   const title = document.createElement("div");
   title.innerHTML = "Example Two";
   document.getElementById("fetchWaterfall").appendChild(title);
+  // (async () => {
+  //   for (let { path, index } of config.one) {
+  //     const next = await fetch(path);
+  //     const child = document.createElement("div");
+  //     child.innerHTML = index;
+  //     document.getElementById("fetchWaterfall").appendChild(child);
+  //   }
+  // })();
+
   (async () => {
-    for (let { path, index } of config.one) {
-      const next = await fetch(path);
+    const promises = config.one.map(({ path }) => fetch(path));
+    const values = await Promise.all(promises);
+    values.forEach((value, index) => {
       const child = document.createElement("div");
-      child.innerHTML = index;
+      child.innerHTML = index + 1;
       document.getElementById("fetchWaterfall").appendChild(child);
-    }
+    });
+    child = document.createElement("div");
+    child.innerHTML = "--------------------";
+    document.getElementById("fetchWaterfall").appendChild(child);
   })();
 
   // Note this will not work with forEach
@@ -32,7 +45,7 @@ export default () => {
   //       await callback(array[index], index, array);
   //     }
   //   }
-  child = document.createElement("div");
-  child.innerHTML = "--------------------";
-  document.getElementById("fetchWaterfall").appendChild(child);
+  // child = document.createElement("div");
+  // child.innerHTML = "--------------------";
+  // document.getElementById("fetchWaterfall").appendChild(child);
 };

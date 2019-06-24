@@ -45,5 +45,15 @@ export default {
       index: "9",
       message: "This is blob 9"
     }
+  ],
+  two: [
+    "static/salesforce1.jpg",
+    "static/salesforce2.jpg",
+    "static/salesforce3.jpg",
+    "static/salesforce4.jpg",
+    "static/salesforce5.jpg",
+    "static/salesforce6.jpg",
+    "static/salesforce7.jpg",
+    "static/salesforce8.jpg"
   ]
 };

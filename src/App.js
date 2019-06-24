@@ -15,6 +15,7 @@ import promise from "./examples/promise";
 import AsyncAwait from "./examples/AsyncAwait";
 import AsyncAwaitErrorHandling from "./examples/AsyncAwaitErrorHandling";
 import AsyncAwaitLoop from "./examples/AsyncAwaitLoop";
+import PreloadImage from "./examples/PreloadImage";
 
 // fetch(`static/jason.json`)
 //   .then(response => response.json())
@@ -88,6 +89,8 @@ const App = () => (
       <button onClick={AsyncAwaitLoop}>
         Run Example Six - Async Await Loop
       </button>
+      <h1> Example 7</h1>
+      <button onClick={PreloadImage}>Preload Image</button>
       <div id="fetchWaterfall">
         <h1>Order of Load: </h1>
       </div>
